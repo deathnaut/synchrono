@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './header.css';
 import logo from '../image4219.png';
 
 class Header extends Component {
@@ -7,7 +8,7 @@ class Header extends Component {
       <div className="App">
         <header>
           <img src={logo} alt='synchrono logo'/>
-          <h1>welcome to your project</h1>
+          <h1>welcome to synchrono, karla. lets get funky</h1>
         </header>
       </div>
     );
