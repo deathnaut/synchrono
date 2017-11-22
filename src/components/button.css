@@ -1,4 +1,14 @@
 button {
-  background-color: blue;
+  width: 100px;
+  height: 100px;
+  /*background-color: yellow;*/
   border: none;
+  border-radius: 15px;
+  outline: none;
+}
+
+button:hover {
+}
+
+button:focus {
 }
