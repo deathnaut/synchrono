@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SoundFile from './sound.js';
-import './button.css';
 
 class Button extends Component {
   constructor(props){
@@ -22,13 +21,13 @@ class Button extends Component {
         bgColor: 'blue',
         active: true,
         sounds: this.state.sounds.concat({ url: '' })
-        // boxShadow: '0 0 20px #000'
       })
     } else {
       this.setState({
         bgColor: 'yellow',
         active: false,
         boxShadow: 'none',
+        sounds: this.state.sounds
       })
     }
   }
