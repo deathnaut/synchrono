@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SoundFile from './sound.js';
+import Sound from 'react-sound';
 
 class Button extends Component {
   constructor(props){
@@ -35,8 +35,17 @@ class Button extends Component {
   render() {
     return (
       <div className="button">
-        <button name="button" onClick={ this._handleClick } style={{backgroundColor:this.state.bgColor, boxShadow:this.state.boxShadow}}>i am a button</button>
-        {this.state.sounds.map((sound) => <SoundFile url={sound.url}/>)}
+        <Sound
+          url="cat-meow.mp3"
+          playStatus={this.state.active === false ? Sound.status.PAUSED : Sound.status.PLAYING}
+          playFromPosition={0 /* in milliseconds */}
+          onLoading={this.handleSongLoading}
+          onPlaying={this.handleSongPlaying}
+          onFinishedPlaying={this.handleSongFinishedPlaying}
+        />
+        <button onClick={ this._handleClick }>
+            {this.state.active ? 'playing' : 'paused'}
+        </button>
       </div>
     );
   }
