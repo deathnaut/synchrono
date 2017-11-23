@@ -36,7 +36,7 @@ class Button extends Component {
     return (
       <div className="button">
         <Sound
-          url="cat-meow.mp3"
+          url={this.props.sound}
           playStatus={this.state.active === false ? Sound.status.PAUSED : Sound.status.PLAYING}
           playFromPosition={0 /* in milliseconds */}
           onLoading={this.handleSongLoading}
