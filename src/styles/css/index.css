@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Geo");
 body {
-  background-color: #2eb9f7; }
+  background-color: #2eb9f7;
+  font-family: 'Geo', sans-serif;
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

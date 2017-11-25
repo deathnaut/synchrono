@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAEA,IAAK;EACH,gBAAgB,EAHF,OAAO",
+"mappings": "AAaQ,0DAAkD;AAG1D,IAAK;EACH,gBAAgB,EAHF,OAAO;EAIrB,WAAW,EAAE,iBAAiB;EAC9B,UAAU,EAAE,MAAM",
 "sources": ["../scss/App.scss"],
 "names": [],
 "file": "index.css"

@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
 
+// TODO: fix sound playing issue
+// what it should do: start sound file from beginning anytime it is activated
+// needs to not: pauses mid sound file and picks up where it left off
+// HINT:
+
+// TODO: fix loop
+// what it should do: loop when file is done playing
+// needs to not: only play one time upon activation
+// HINT: LOOK AT onFinishedPlaying={this.handleSongFinishedPlaying}
+
 class Button extends Component {
   constructor(props){
     super(props);

@@ -1,5 +1,21 @@
+// TODO: find lit color scheme
+//// TODO: THEMES
+// TODO:layout
+//// css grid? flexbox? google it
+// TODO: style buttons
+// TODO: style button activations
+//// glow!
+//// possibly animate?
+//// code it button.js: this.state.active
+// TODO: style footer
+//// minimal, clean
+
+
+@import url('https://fonts.googleapis.com/css?family=Geo');
 $primary-color: #2eb9f7;
 
 body {
   background-color: $primary-color;
+  font-family: 'Geo', sans-serif;
+  text-align: center;
 }
