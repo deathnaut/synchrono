@@ -47,11 +47,11 @@ class Button extends Component {
       <div className="button">
         <Sound
           url={this.props.sound}
-          playStatus={this.state.active === false ? Sound.status.PAUSED : Sound.status.PLAYING}
+          playStatus={this.state.active === false ? Sound.status.STOPPED : Sound.status.PLAYING}
           playFromPosition={0 /* in milliseconds */}
           onLoading={this.handleSongLoading}
           onPlaying={this.handleSongPlaying}
-          onFinishedPlaying={this.handleSongFinishedPlaying}
+          onFinishedPlaying={this.playFromPosition}
         />
         <button onClick={ this._handleClick }>
             {this.state.active ? 'playing' : 'paused'}
