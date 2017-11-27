@@ -20,8 +20,10 @@ class Button extends Component {
       active: false,
       boxShadow: 'none',
       sounds: [],
-    }
+      position: 0,
+    };
     this._handleClick = this._handleClick.bind(this);
+    this._continuePlaying = this._continuePlaying.bind(this);
   }
 
   _handleClick(){
@@ -42,6 +44,10 @@ class Button extends Component {
     }
   }
 
+  _continuePlaying(){
+    this.setState({position: 0});
+  }
+
   render() {
     return (
       <div className="button">
@@ -51,7 +57,7 @@ class Button extends Component {
           playFromPosition={0 /* in milliseconds */}
           onLoading={this.handleSongLoading}
           onPlaying={this.handleSongPlaying}
-          onFinishedPlaying={this.playFromPosition}
+          onFinishedPlaying={this._continuePlaying}
         />
         <button onClick={ this._handleClick }>
             {this.state.active ? 'playing' : 'paused'}
