@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
 
-// TODO: fix sound playing issue
-// what it should do: start sound file from beginning anytime it is activated
-// needs to not: pauses mid sound file and picks up where it left off
+// TODO: fix loop/multiple sounds playing on mobile!
+// what it should do: play multiple sounds that loop
+// needs to not: stop a sound playing to play another
 // HINT:
-
-// TODO: fix loop
-// what it should do: loop when file is done playing
-// needs to not: only play one time upon activation
-// HINT: LOOK AT onFinishedPlaying={this.handleSongFinishedPlaying}
 
 class Button extends Component {
   constructor(props){
     super(props);
 
     this.state = {
+      isActive: '',
       bgColor: 'yellow',
       active: false,
       boxShadow: 'none',
@@ -32,12 +28,14 @@ class Button extends Component {
       this.setState({
         bgColor: 'blue',
         active: true,
+        isActive: 'isActive',
         sounds: this.state.sounds.concat({ url: '' })
       })
     } else {
       this.setState({
         bgColor: 'yellow',
         active: false,
+        isActive: '',
         boxShadow: 'none',
         sounds: this.state.sounds
       })
@@ -50,7 +48,7 @@ class Button extends Component {
 
   render() {
     return (
-      <div className="button">
+      <div className="button-container">
         <Sound
           url={this.props.sound}
           playStatus={this.state.active === false ? Sound.status.STOPPED : Sound.status.PLAYING}
@@ -59,7 +57,7 @@ class Button extends Component {
           onPlaying={this.handleSongPlaying}
           onFinishedPlaying={this._continuePlaying}
         />
-        <button onClick={ this._handleClick }>
+      <button onClick={ this._handleClick } className={this.state.isActive}>
             {this.state.active ? 'playing' : 'paused'}
         </button>
       </div>

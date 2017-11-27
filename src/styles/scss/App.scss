@@ -13,17 +13,40 @@
 
 @import url('https://fonts.googleapis.com/css?family=Geo');
 $primary-color: #2eb9f7;
+$button-color: #f9c80e;
+$button-active: #f28300;
+$secondary-color: #494747;
+$ternary-color: #13f261;
 
-body {
+html, body {
   background-color: $primary-color;
   font-family: 'Geo', sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  margin: 0;
 }
 
 footer {
   background-color: black;
   color: white;
   flex: 1;
+
+}
+
+.buttons-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  button, .button-container {
+    background-color: $button-color;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+  }
+  .isActive {
+    background-color: $button-active;
+  }
 }

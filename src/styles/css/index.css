@@ -1,14 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Geo");
-body {
+html, body {
   background-color: #2eb9f7;
   font-family: 'Geo', sans-serif;
   text-align: center;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100%;
+  margin: 0; }
 
 footer {
   background-color: black;
   color: white;
   flex: 1; }
+
+.buttons-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .buttons-grid button, .buttons-grid .button-container {
+    background-color: #f9c80e;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px; }
+  .buttons-grid .isActive {
+    background-color: #f28300; }
 
 /*# sourceMappingURL=index.css.map */
