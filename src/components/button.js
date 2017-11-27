@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
 
-// TODO: fix loop/multiple sounds playing on mobile!
-// what it should do: play multiple sounds that loop
-// needs to not: stop a sound playing to play another
-// HINT:
-
 class Button extends Component {
   constructor(props){
     super(props);
 
     this.state = {
       isActive: '',
-      bgColor: 'yellow',
       active: false,
-      boxShadow: 'none',
       sounds: [],
       position: 0,
     };
@@ -24,19 +17,16 @@ class Button extends Component {
 
   _handleClick(){
     console.log("click");
-    if (this.state.bgColor === 'yellow') {
+    if (this.state.active === false) {
       this.setState({
-        bgColor: 'blue',
         active: true,
         isActive: 'isActive',
         sounds: this.state.sounds.concat({ url: '' })
       })
     } else {
       this.setState({
-        bgColor: 'yellow',
         active: false,
         isActive: '',
-        boxShadow: 'none',
         sounds: this.state.sounds
       })
     }

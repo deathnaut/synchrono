@@ -26,13 +26,16 @@ html, body {
   flex-direction: column;
   height: 100%;
   margin: 0;
+  color: $ternary-color;
 }
 
 footer {
-  background-color: black;
+  background-color: $secondary-color;
   color: white;
-  flex: 1;
-
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  min-height: 50px;
 }
 
 .buttons-grid {
