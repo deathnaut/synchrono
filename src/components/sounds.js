@@ -36,21 +36,27 @@ class Sounds extends Component {
 
   render() {
     let soundObjArr = [
-                        {
-                          filename: "kick.wav",
-                          type: "kick",
-                          pattern: [0,8],
-                        },
-                        {
-                          filename: "beep.wav",
-                          type: "kick",
-                          pattern: [0,4,8,12],
-                        },
-                      ];
-    console.log(soundObjArr[0].filename);
-    console.log(soundObjArr[0].type);
-    console.log(soundObjArr[0].pattern);
-    // let soundArr = ["beep.wav","kick.wav","clap.wav","hi-hat.ogg","beep.wav","kick.wav","clap.wav","hi-hat.ogg","beep.wav","kick.wav","clap.wav","hi-hat.ogg"];
+        {
+          filename: "beep.wav",
+          type: "",
+          pattern: [0,4,8,12],
+        },
+        {
+          filename: "kick.wav",
+          type: "kick",
+          pattern: [0,4,8,12],
+        },
+        {
+          filename: "clap.wav",
+          type: "snare",
+          pattern: [4,12],
+        },
+        {
+          filename: "hi-hat.ogg",
+          type: "hi-hat",
+          pattern: [2,6,10,14],
+        },
+      ];
     let buttons = soundObjArr.map((soundObj, idx) => <Button key={idx} sound={soundObj.filename} type={soundObj.type} pattern={soundObj.pattern}/>);
     return (
       <div>
