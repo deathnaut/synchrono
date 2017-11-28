@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   Analyser,
-  Song,
   Sequencer,
   Sampler,
   Synth,
@@ -24,7 +23,7 @@ class Button extends Component {
     console.log("click");
     if (this.state.active === false) {
       this.setState({
-        pattern: [0, 4, 8, 12],
+        pattern: this.props.pattern,
         active: true,
         isActive: 'isActive'
       })

@@ -35,8 +35,23 @@ class Sounds extends Component {
   }
 
   render() {
-    let soundArr = ["beep.wav","kick.wav","clap.wav","hi-hat.ogg","beep.wav","kick.wav","clap.wav","hi-hat.ogg","beep.wav","kick.wav","clap.wav","hi-hat.ogg"];
-    let buttons = soundArr.map((sound, idx) => <Button key={idx} sound={sound} start={Date.now()}/>);
+    let soundObjArr = [
+                        {
+                          filename: "kick.wav",
+                          type: "kick",
+                          pattern: [0,8],
+                        },
+                        {
+                          filename: "beep.wav",
+                          type: "kick",
+                          pattern: [0,4,8,12],
+                        },
+                      ];
+    console.log(soundObjArr[0].filename);
+    console.log(soundObjArr[0].type);
+    console.log(soundObjArr[0].pattern);
+    // let soundArr = ["beep.wav","kick.wav","clap.wav","hi-hat.ogg","beep.wav","kick.wav","clap.wav","hi-hat.ogg","beep.wav","kick.wav","clap.wav","hi-hat.ogg"];
+    let buttons = soundObjArr.map((soundObj, idx) => <Button key={idx} sound={soundObj.filename} type={soundObj.type} pattern={soundObj.pattern}/>);
     return (
       <div>
         <Song tempo={this.state.tempo} playing={this.state.auto}>
