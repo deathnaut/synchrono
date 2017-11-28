@@ -95,9 +95,9 @@ input {
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.5); }
   100% {
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0); } }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 950px) {
   html, body {
-    max-width: 450px; }
+    max-width: 750px; }
 
   .App, .container {
     display: flex;
