@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import Header from './components/header';
+import Sounds from './components/song';
 import Footer from './components/footer';
 import Button from './components/button';
 
 class App extends Component {
+  componentDidMount() {
+    console.log("howdy");
+  }
   render() {
-    let soundArr = ["cat-meow.mp3","cat-meow2.wav","cat-meow3.wav","cat-meow4.wav"];
-    let buttons = soundArr.map((sound, idx) => <Button key={idx} sound={sound}/>);
+    let soundArr = ["beep.wav","beep.wav","beep.wav","beep.wav"];
+    let buttons = soundArr.map((sound, idx) => <Button key={idx} sound={sound} start={Date.now()}/>);
     return (
       <div className="App">
         <Header />
-        <div className="buttons-grid">
-          {buttons}
-        </div>
+        <Sounds />
         <Footer />
       </div>
     );

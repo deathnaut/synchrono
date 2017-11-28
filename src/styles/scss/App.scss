@@ -45,11 +45,16 @@ footer {
   button, .button-container {
     background-color: $button-color;
     border: none;
+    border-radius: 25px;
     outline: none;
     width: 100px;
     height: 100px;
   }
+  button {
+    box-shadow: 2px 2px;
+  }
   .isActive {
     background-color: $button-active;
+    box-shadow: none;
   }
 }

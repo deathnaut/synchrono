@@ -24,10 +24,14 @@ footer {
   .buttons-grid button, .buttons-grid .button-container {
     background-color: #f9c80e;
     border: none;
+    border-radius: 25px;
     outline: none;
     width: 100px;
     height: 100px; }
+  .buttons-grid button {
+    box-shadow: 2px 2px; }
   .buttons-grid .isActive {
-    background-color: #f28300; }
+    background-color: #f28300;
+    box-shadow: none; }
 
 /*# sourceMappingURL=App.css.map */

@@ -32,8 +32,13 @@ class Button extends Component {
     }
   }
 
+
   _continuePlaying(){
-    this.setState({position: 0});
+    console.log(Math.floor(((Date.now() / 1000) % 60) - ((this.props.start / 1000) % 60)));
+    const self = this;
+    setTimeout(function(){
+      self.setState({position: 0})
+    }, 3000);
   }
 
   render() {
@@ -47,7 +52,7 @@ class Button extends Component {
           onPlaying={this.handleSongPlaying}
           onFinishedPlaying={this._continuePlaying}
         />
-      <button onClick={ this._handleClick } className={this.state.isActive}>
+        <button onClick={ this._handleClick } className={this.state.isActive}>
             {this.state.active ? 'playing' : 'paused'}
         </button>
       </div>
