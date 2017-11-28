@@ -13,6 +13,10 @@ html, body {
   align-items: center;
   justify-content: center; }
 
+img {
+  animation: slideDown 3s;
+  transform-origin: center; }
+
 .App, .container {
   display: flex;
   flex-direction: column;
@@ -37,25 +41,37 @@ footer {
     font-family: "Geo", sans-serif;
     font-size: 18px;
     justify-content: space-around;
-    background-color: #f9c80e;
     border: none;
     outline: none;
     width: 125px;
     height: 125px; }
   .buttons-grid button {
-    border: 1px solid rgba(0, 0, 0, 0.05); }
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #f9c80e; }
   .buttons-grid .isActive {
-    animation: grow 1s infinite;
+    animation: glow 1s infinite;
     transform-origin: center;
     border: none;
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.3); }
 
-@keyframes grow {
+@keyframes slideDown {
+  0% {
+    transform: translateY(-200%); }
+  100% {
+    transform: translateY(0%); } }
+@keyframes pop {
   0% {
     transform: scale(1); }
   50% {
-    transform: scale(0.85); }
+    transform: scale(1.1); }
   100% {
     transform: scale(1); } }
+@keyframes glow {
+  0% {
+    box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0); }
+  50% {
+    box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.5); }
+  100% {
+    box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0); } }
 
 /*# sourceMappingURL=index.css.map */

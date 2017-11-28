@@ -76,6 +76,11 @@ class Sounds extends Component {
           type: "surprise",
           pattern: [6],
         },
+        {
+          filename: "whoop.mp3",
+          type: "surprise",
+          pattern: [[2,-8],[9,-12],11,[14, -12]],
+        },
       ];
     let buttons = soundObjArr.map((soundObj, idx) => <Button key={idx} sound={soundObj.filename} type={soundObj.type} pattern={soundObj.pattern}/>);
     return (
