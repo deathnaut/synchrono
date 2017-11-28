@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/header.js';
 import Sounds from './components/sounds.js';
-import Footer from './components/footer.js';
+// import Footer from './components/footer.js';
 // import Button from './components/button';
 
 class App extends Component {
@@ -15,7 +15,6 @@ class App extends Component {
       <div className="App container">
         <Header />
         <Sounds />
-        <Footer />
       </div>
     );
   }

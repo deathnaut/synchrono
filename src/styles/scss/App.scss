@@ -18,36 +18,44 @@ $button-active: #f28300;
 $secondary-color: #494747;
 $ternary-color: #13f261;
 
-html, body {
+html, body, {
   background-color: $primary-color;
   font-family: 'Geo', sans-serif;
   text-align: center;
   display: flex;
-  flex-direction: column;
   height: 100%;
+  overflow-y: hidden;
+  flex-direction: column;
   margin: 0;
   color: $ternary-color;
+  align-items: center;
+  justify-content: center;
+}
+
+.App, .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 1000px;
 }
 
 footer {
+  align-self: flex-end;
   background-color: $secondary-color;
   color: white;
-  position: absolute;
   width: 100%;
-  bottom: 0;
   min-height: 50px;
 }
 
 .buttons-grid {
   display: flex;
-  flex: 1;
-  align-items: space-around;
-  justify-content: center;
+  align-self: center;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 36%;
-  width: 400px;
+  width: 33%;
+  margin: 0 33%;
   button, .button-container {
+    justify-content: space-around;
     background-color: $button-color;
     border: none;
     border-radius: 25px;
@@ -58,8 +66,11 @@ footer {
   button {
     box-shadow: 2px 2px;
   }
+  .button-container {
+    margin: 5px;
+  }
   .isActive {
-    background-color: $button-active;
+    transform: scale(.80);
     box-shadow: none;
   }
 }
