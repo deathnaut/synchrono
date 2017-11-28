@@ -38,8 +38,8 @@ class Sounds extends Component {
     let soundObjArr = [
         {
           filename: "beep.wav",
-          type: "",
-          pattern: [0,4,8,12],
+          type: "metronome",
+          pattern: [[0, 12],4,8,12],
         },
         {
           filename: "kick2.wav",
@@ -67,14 +67,14 @@ class Sounds extends Component {
           pattern: [2,3,4,5,6,10,14],
         },
         {
-          filename: "cat-meow3.wav",
-          type: "meow",
-          pattern: [6],
-        },
-        {
           filename: "shaker.wav",
           type: "shaker",
-          pattern: [2,6,10,14],
+          pattern: [2,4,6,10,12,14],
+        },
+        {
+          filename: "cat-meow3.wav",
+          type: "surprise",
+          pattern: [6],
         },
       ];
     let buttons = soundObjArr.map((soundObj, idx) => <Button key={idx} sound={soundObj.filename} type={soundObj.type} pattern={soundObj.pattern}/>);
