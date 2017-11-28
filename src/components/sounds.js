@@ -62,14 +62,14 @@ class Sounds extends Component {
           pattern: [2,6,10,14],
         },
         {
-          filename: "hi-hat.ogg",
-          type: "hi-hat",
-          pattern: [2,3,4,5,6,10,14],
-        },
-        {
           filename: "shaker.wav",
           type: "shaker",
-          pattern: [2,4,6,10,12,14],
+          pattern: [0,2,4,7,10,12,15],
+        },
+        {
+          filename: "busy-tone.mp3",
+          type: "surprise",
+          pattern: [0,[6, -12],12],
         },
         {
           filename: "cat-meow3.wav",
