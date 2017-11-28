@@ -74,6 +74,15 @@ footer {
     border: none;
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.3); }
 
+input {
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  border: none;
+  font-family: "Geo", sans-serif;
+  font-size: 36px;
+  color: white;
+  width: 75px; }
+
 @keyframes slideDown {
   0% {
     transform: translateY(-5000%); }

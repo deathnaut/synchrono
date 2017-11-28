@@ -8,7 +8,7 @@ class Sounds extends Component {
   constructor(props){
     super(props);
     this.state = {
-      tempo: 120,
+      tempo: this.props.tempo,
       auto: true,
       pattern: [],
       active: false,
@@ -79,13 +79,13 @@ class Sounds extends Component {
         {
           filename: "whoop.mp3",
           type: "surprise",
-          pattern: [[2,-8],[9,-12],11,[14, -12]],
+          pattern: [[2,-6],[9,-12],11,[14, -12]],
         },
       ];
     let buttons = soundObjArr.map((soundObj, idx) => <Button key={idx} sound={soundObj.filename} type={soundObj.type} pattern={soundObj.pattern}/>);
     return (
       <div>
-        <Song tempo={this.state.tempo} playing={this.state.auto}>
+        <Song tempo={this.props.tempo} playing={this.state.auto}>
           <div className="buttons-grid">
             {buttons}
           </div>

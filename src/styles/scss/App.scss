@@ -97,6 +97,16 @@ footer {
   }
 }
 
+input {
+  background-color: rgba(0,0,0,0);
+  outline: none;
+  border: none;
+  font-family: $font;
+  font-size: 36px;
+  color: white;
+  width: 75px;
+}
+
 @keyframes slideDown {
   0% {transform: translateY(-5000%);}
   100% {transform: translateY(0%);}

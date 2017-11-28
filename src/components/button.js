@@ -10,8 +10,6 @@ class Button extends Component {
   constructor(props){
     super(props);
     this.state = {
-      tempo: 120,
-      auto: true,
       pattern: [],
       active: false,
       isActive: '',
