@@ -57,14 +57,6 @@ h1, h3 {
   width: 1000px;
 }
 
-footer {
-  align-self: flex-end;
-  background-color: $secondary-color;
-  color: white;
-  width: 100%;
-  min-height: 50px;
-}
-
 .buttons-grid {
   -webkit-animation: slideDown 2.5s; /* Safari 4+ */
   -moz-animation:    slideDown 2.5s; /* Fx 5+ */
@@ -82,8 +74,8 @@ footer {
     justify-content: space-around;
     border: none;
     outline: none;
-    width: 125px;
-    height: 125px;
+    width: 120px;
+    height: 120px;
   }
   button {
     border: 1px solid rgba(0,0,0,.05);
@@ -122,4 +114,21 @@ input {
   0% {box-shadow: inset -2px -2px 50px 5px rgba(255,255,255,0);}
   50% {box-shadow: inset -2px -2px 50px 5px rgba(255,255,255,0.5);}
   100% {box-shadow: inset -2px -2px 50px 5px rgba(255,255,255,0);}
+}
+
+@media screen and (max-width: 950px){
+  html, body {
+    max-width: 750px;
+  }
+
+  .App, .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  button, .button-container {
+    max-width: 100px;
+    max-height: 100px;
+  }
 }
