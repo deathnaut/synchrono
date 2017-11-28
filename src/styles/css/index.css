@@ -52,7 +52,7 @@ h1, h3 {
   margin: 0 31%; }
   .buttons-grid button, .buttons-grid .button-container {
     font-family: "Geo", sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     justify-content: space-around;
     border: none;
     outline: none;

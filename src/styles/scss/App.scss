@@ -1,15 +1,3 @@
-// TODO: find lit color scheme
-//// TODO: THEMES
-// TODO:layout
-//// css grid? flexbox? google it
-// TODO: style buttons
-// TODO: style button activations
-//// glow!
-//// possibly animate?
-//// code it button.js: this.state.active
-// TODO: style footer
-//// minimal, clean
-
 
 @import url('https://fonts.googleapis.com/css?family=Geo');
 $font: 'Geo', sans-serif;
@@ -70,7 +58,7 @@ h1, h3 {
   margin: 0 31%;
   button, .button-container {
     font-family: $font;
-    font-size: 18px;
+    font-size: 20px;
     justify-content: space-around;
     border: none;
     outline: none;
@@ -120,7 +108,6 @@ input {
   html, body {
     max-width: 750px;
   }
-
   .App, .container {
     display: flex;
     flex-direction: column;
