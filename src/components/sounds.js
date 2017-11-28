@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import {
-  Analyser,
   Song,
-  Sequencer,
-  Sampler,
-  Synth,
 } from 'react-music';
+import Button from './button';
 
-class Button extends Component {
+class Sounds extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -38,20 +35,17 @@ class Button extends Component {
   }
 
   render() {
+    let soundArr = ["beep.wav","kick.wav","clap.wav","hi-hat.ogg"];
+    let buttons = soundArr.map((sound, idx) => <Button key={idx} sound={sound} start={Date.now()}/>);
     return (
       <div className="button-container">
-        <button onClick={ this._handleClick } className={this.state.isActive}>
-          {this.state.active ? 'playing' : 'paused'}
-        </button>
-        <Sequencer resolution={16} bars={1}>
-          <Sampler
-            sample={"./",this.props.sound}
-            steps={this.state.pattern}
-          />
-        </Sequencer>
+        <h1>howdy</h1>
+        <Song tempo={this.state.tempo} playing={this.state.auto}>
+          {buttons}
+        </Song>
       </div>
     );
   }
 }
 
-export default Button;
+export default Sounds;

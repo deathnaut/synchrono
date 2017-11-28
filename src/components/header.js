@@ -8,7 +8,7 @@ class Header extends Component {
       <div className="App">
         <header>
           <img src={puppy} alt='synchrono logo'/>
-          <h1>welcome to synchrono, karla. lets get funky</h1>
+          <h1>let's get funky</h1>
         </header>
       </div>
     );
