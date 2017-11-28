@@ -35,13 +35,14 @@ class Sounds extends Component {
   }
 
   render() {
-    let soundArr = ["beep.wav","kick.wav","clap.wav","hi-hat.ogg"];
+    let soundArr = ["beep.wav","kick.wav","clap.wav","hi-hat.ogg","beep.wav","kick.wav","clap.wav","hi-hat.ogg","beep.wav","kick.wav","clap.wav","hi-hat.ogg"];
     let buttons = soundArr.map((sound, idx) => <Button key={idx} sound={sound} start={Date.now()}/>);
     return (
-      <div className="button-container">
-        <h1>howdy</h1>
+      <div>
         <Song tempo={this.state.tempo} playing={this.state.auto}>
-          {buttons}
+          <div className="buttons-grid">
+            {buttons}
+          </div>
         </Song>
       </div>
     );

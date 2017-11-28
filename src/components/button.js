@@ -45,7 +45,7 @@ class Button extends Component {
         </button>
         <Sequencer resolution={16} bars={1}>
           <Sampler
-            sample={"./",this.props.sound}
+            sample={"./"+this.props.sound}
             steps={this.state.pattern}
           />
         </Sequencer>

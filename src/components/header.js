@@ -5,7 +5,7 @@ import puppy from '../image4219.png';
 class Header extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <header>
           <img src={puppy} alt='synchrono logo'/>
           <h1>let's get funky</h1>
