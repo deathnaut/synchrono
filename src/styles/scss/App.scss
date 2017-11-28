@@ -28,15 +28,26 @@ html, body, {
   overflow-y: hidden;
   flex-direction: column;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 5px;
   color: $ternary-color;
   align-items: center;
   justify-content: center;
 }
 
 img {
-  animation: slideDown 3s;
+  -webkit-animation: slideDown 1s; /* Safari 4+ */
+  -moz-animation:    slideDown 1s; /* Fx 5+ */
+  -o-animation:      slideDown 1s;
+  animation: slideDown 1s;
   transform-origin: center;
+}
+
+h1, h3 {
+  margin-top: 0;
+  -webkit-animation: slideDown 2s; /* Safari 4+ */
+  -moz-animation:    slideDown 2s; /* Fx 5+ */
+  -o-animation:      slideDown 2s;
+  animation: slideDown 2s;
 }
 
 .App, .container {
@@ -55,6 +66,10 @@ footer {
 }
 
 .buttons-grid {
+  -webkit-animation: slideDown 2.5s; /* Safari 4+ */
+  -moz-animation:    slideDown 2.5s; /* Fx 5+ */
+  -o-animation:      slideDown 2.5s;
+  animation: slideDown 2.5s;
   display: flex;
   align-self: center;
   flex-direction: row;
@@ -83,7 +98,7 @@ footer {
 }
 
 @keyframes slideDown {
-  0% {transform: translateY(-200%);}
+  0% {transform: translateY(-5000%);}
   100% {transform: translateY(0%);}
 }
 

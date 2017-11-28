@@ -8,6 +8,7 @@ class Header extends Component {
       <div>
         <header>
           <img src={puppy} alt='synchrono logo'/>
+          <h3>(the demo)</h3>
           <h1>let's get funky</h1>
         </header>
       </div>
