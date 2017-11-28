@@ -12,7 +12,7 @@ class App extends Component {
     // let soundArr = ["beep.wav","beep.wav","beep.wav","beep.wav"];
     // let buttons = soundArr.map((sound, idx) => <Button key={idx} sound={sound} start={Date.now()}/>);
     return (
-      <div className="App">
+      <div className="App container">
         <Header />
         <Sounds />
         <Footer />

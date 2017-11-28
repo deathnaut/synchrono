@@ -42,9 +42,14 @@ class Sounds extends Component {
           pattern: [0,4,8,12],
         },
         {
-          filename: "kick.wav",
+          filename: "kick2.wav",
           type: "kick",
           pattern: [0,4,8,12],
+        },
+        {
+          filename: "kick2.wav",
+          type: "kick",
+          pattern: [0,3,6,8,12],
         },
         {
           filename: "clap.wav",
@@ -54,6 +59,21 @@ class Sounds extends Component {
         {
           filename: "hi-hat.ogg",
           type: "hi-hat",
+          pattern: [2,6,10,14],
+        },
+        {
+          filename: "hi-hat.ogg",
+          type: "hi-hat",
+          pattern: [2,3,4,5,6,10,14],
+        },
+        {
+          filename: "cat-meow3.wav",
+          type: "meow",
+          pattern: [6],
+        },
+        {
+          filename: "shaker.wav",
+          type: "shaker",
           pattern: [2,6,10,14],
         },
       ];

@@ -40,7 +40,7 @@ class Button extends Component {
     return (
       <div className="button-container">
         <button onClick={ this._handleClick } className={this.state.isActive}>
-          {this.state.active ? 'playing' : 'paused'}
+          {this.props.type}
         </button>
         <Sequencer resolution={16} bars={1}>
           <Sampler
