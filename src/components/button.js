@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {
-  Analyser,
   Sequencer,
   Sampler,
-  Synth,
 } from 'react-music';
 
 class Button extends Component {

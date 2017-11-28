@@ -92,7 +92,7 @@ footer {
   .isActive{
     animation: glow 1s infinite;
     transform-origin: center;
-    border: none;
+    border: 1px solid rgba(0,0,0,.05);
     box-shadow: inset -2px -2px 50px 5px rgba(255,255,255,0.3);
   }
 }

@@ -17,13 +17,13 @@ class App extends Component {
 
   _changeTempo(e){
     this.setState({
-      tempo: e.target.value,
+      tempo: parseInt(e.target.value, 10),
     })
   }
 
   _handleChange(e) {
     this.setState({
-      tempo: e.target.value,
+      tempo: parseInt(e.target.value, 10),
     })
   }
 
@@ -36,7 +36,7 @@ class App extends Component {
       <div className="App container">
         <Header />
         <Sounds tempo={this.state.tempo}/>
-        <h1>tempo: <input type="number" name="tempo" value={this.state.tempo} onChange={this._handleChange}/></h1>
+        <h1>tempo: <input type="number" name="tempo" value={this.state.tempo} onChange={this._handleChange} min="40" max="200"/></h1>
       </div>
     );
   }
