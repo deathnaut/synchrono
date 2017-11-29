@@ -3,16 +3,17 @@ Synchrono is a music-performance app that allows you to select and play clips in
 
 See it [live](http://synchrono-app.firebaseapp.com).
 
+
 ### getting started
 You can either clone this repository or fork your own copy and clone it.
 Navigate to the project in your terminal then enter `npm install`. Once you've done that, open the folder in your editor and get to exploring.
 
 
-
 ### technologies used
 - React.js
-  - react-music
+  - [react-music](https://github.com/FormidableLabs/react-music)
 - Firebase (for deployment)
+
 
 ### future features
 - Customizable patterns

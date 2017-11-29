@@ -15,7 +15,7 @@ html, body {
 
 .party-mode {
   background-color: rgba(0, 0, 0, 0);
-  animation: rainbow 2s infinite;
+  animation: rainbow 4s infinite;
   color: black; }
 
 img {
@@ -104,7 +104,7 @@ h1, h3 {
   color: white; }
 
 .show {
-  animation: fadeInOut 400ms; }
+  animation: fadeInOut 500ms; }
 
 input {
   background-color: rgba(0, 0, 0, 0);
