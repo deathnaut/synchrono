@@ -21,12 +21,12 @@ class App extends Component {
       document.getElementById('faster-indicator').className='show';
       setTimeout(() => {
         document.getElementById('faster-indicator').className=''
-      }, 500);
+      }, 700);
     } else if (e.target.value < this.state.tempo) {
       document.getElementById('slower-indicator').className='show';
       setTimeout(() => {
         document.getElementById('slower-indicator').className=''
-      }, 500);
+      }, 700);
     }
     this.setState({
       tempo: parseInt(e.target.value, 10),
@@ -77,7 +77,7 @@ class App extends Component {
           <h1>tempo: <input type="number" name="tempo" value={this.state.tempo} onChange={this._handleChange} min="10" max="300"/></h1>
           <div className="indicators">
             <p id="faster-indicator">faster!</p>
-            <p id="slower-indicator">slower</p>
+            <p id="slower-indicator">slower!</p>
           </div>
         </div>
       </div>
