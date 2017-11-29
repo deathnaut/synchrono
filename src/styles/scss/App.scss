@@ -86,7 +86,7 @@ h1, h3 {
   }
 }
 
-.party-button, #play-button {
+#party-button, #play-button {
   animation: sway 2s infinite;
   font-size: 20px;
   font-family: $font;
@@ -98,7 +98,7 @@ h1, h3 {
   margin-top: 10px;
 }
 
-.party-button:before, #play-button:before {
+#party-button:before, #play-button:before {
   content: "> ";
 }
 
@@ -115,7 +115,7 @@ h1, h3 {
   position: absolute;
   opacity: 0;
   margin: 0 48%;
-  font-size: 24px;
+  font-size: 28px;
   color: white;
 }
 
@@ -197,5 +197,8 @@ input {
     font-size: 10px;
     max-width: 75px;
     max-height: 75px;
+  }
+  #party-button, #play-button {
+    font-size: 16px;
   }
 }

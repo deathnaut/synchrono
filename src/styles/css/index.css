@@ -75,7 +75,7 @@ h1, h3 {
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.3); }
 
-.party-button, #play-button {
+#party-button, #play-button {
   animation: sway 2s infinite;
   font-size: 20px;
   font-family: "Geo", sans-serif;
@@ -86,7 +86,7 @@ h1, h3 {
   background-color: rgba(0, 0, 0, 0);
   margin-top: 10px; }
 
-.party-button:before, #play-button:before {
+#party-button:before, #play-button:before {
   content: "> "; }
 
 .animate {
@@ -100,7 +100,7 @@ h1, h3 {
   position: absolute;
   opacity: 0;
   margin: 0 48%;
-  font-size: 24px;
+  font-size: 28px;
   color: white; }
 
 .show {
@@ -181,6 +181,9 @@ input {
   button, .button-container {
     font-size: 10px;
     max-width: 75px;
-    max-height: 75px; } }
+    max-height: 75px; }
+
+  #party-button, #play-button {
+    font-size: 16px; } }
 
 /*# sourceMappingURL=index.css.map */

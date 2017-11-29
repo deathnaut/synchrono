@@ -21,12 +21,12 @@ class App extends Component {
       document.getElementById('faster-indicator').className='show';
       setTimeout(() => {
         document.getElementById('faster-indicator').className=''
-      }, 700);
+      }, 600);
     } else if (e.target.value < this.state.tempo) {
       document.getElementById('slower-indicator').className='show';
       setTimeout(() => {
         document.getElementById('slower-indicator').className=''
-      }, 700);
+      }, 600);
     }
     this.setState({
       tempo: parseInt(e.target.value, 10),
@@ -65,7 +65,7 @@ class App extends Component {
       <div className="App container">
         <Header party={this.state.party}/>
         <div className="animate">
-          <button className="party-button" onClick={this._handleParty}>
+          <button id="party-button" onClick={this._handleParty}>
             {this.state.party === true ? "it's a party" : "party mode?"}
           </button>
           <button id="play-button" onClick={this._handlePlayToggle}>
