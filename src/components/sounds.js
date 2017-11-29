@@ -49,7 +49,7 @@ class Sounds extends Component {
         {
           filename: "kick2.wav",
           type: "kick",
-          pattern: [0,3,6,8,12],
+          pattern: [0,3,6,8,14],
         },
         {
           filename: "clap.wav",
@@ -62,9 +62,14 @@ class Sounds extends Component {
           pattern: [2,6,10,14],
         },
         {
-          filename: "shaker.wav",
-          type: "shaker",
-          pattern: [0,2,4,7,10,12,15],
+          filename: "open-hat.wav",
+          type: "hi-hat",
+          pattern: [2,6,10,14],
+        },
+        {
+          filename: "zup.wav",
+          type: "bass",
+          pattern: [[0,-4],4,[8,-2]],
         },
         {
           filename: "busy-tone.mp3",
@@ -80,6 +85,16 @@ class Sounds extends Component {
           filename: "whoop.mp3",
           type: "surprise",
           pattern: [[2,-6],[9,-12],11,[14, -12]],
+        },
+        {
+          filename: "ding.wav",
+          type: "surprise",
+          pattern: [[2,-6],[9,-12],11,[14, -12]],
+        },
+        {
+          filename: "woo.wav",
+          type: "surprise",
+          pattern: [15],
         },
       ];
     let buttons = soundObjArr.map((soundObj, idx) => <Button key={idx} sound={soundObj.filename} type={soundObj.type} pattern={soundObj.pattern}/>);

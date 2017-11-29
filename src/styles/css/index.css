@@ -13,7 +13,13 @@ html, body {
   align-items: center;
   justify-content: center; }
 
+.party-mode {
+  background-color: rgba(0, 0, 0, 0);
+  animation: rainbow 2s infinite;
+  color: black; }
+
 img {
+  width: 250px;
   -webkit-animation: slideDown 1s;
   /* Safari 4+ */
   -moz-animation: slideDown 1s;
@@ -67,6 +73,19 @@ h1, h3 {
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.3); }
 
+.party-button {
+  opacity: 0;
+  transition: all 2s ease;
+  opacity: 1;
+  animation: glow 5s infinite;
+  transform-origin: center;
+  font-family: "Geo", sans-serif;
+  align-self: center;
+  width: 80px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0); }
+
 input {
   background-color: rgba(0, 0, 0, 0);
   outline: none;
@@ -95,7 +114,20 @@ input {
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.5); }
   100% {
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0); } }
-@media screen and (max-width: 950px) {
+@keyframes rainbow {
+  0% {
+    background: red; }
+  20% {
+    background: orange; }
+  40% {
+    background: yellow; }
+  60% {
+    background: green; }
+  80% {
+    background: blue; }
+  100% {
+    background: purple; } }
+@media screen and (max-width: 950px), screen and (max-height: 600px) {
   html, body {
     max-width: 750px; }
 
@@ -106,7 +138,8 @@ input {
     width: 100%; }
 
   button, .button-container {
-    max-width: 100px;
-    max-height: 100px; } }
+    font-size: 10px;
+    max-width: 75px;
+    max-height: 75px; } }
 
 /*# sourceMappingURL=index.css.map */
