@@ -69,7 +69,7 @@ class Sounds extends Component {
         {
           filename: "zup.wav",
           type: "bass",
-          pattern: [[0,-4],4,[8,-2]],
+          pattern: [[0,-4],[4, -8],[6,-8]],
         },
         {
           filename: "busy-tone.mp3",
