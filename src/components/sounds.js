@@ -100,7 +100,7 @@ class Sounds extends Component {
     let buttons = soundObjArr.map((soundObj, idx) => <Button key={idx} sound={soundObj.filename} type={soundObj.type} pattern={soundObj.pattern}/>);
     return (
       <div>
-        <Song tempo={this.props.tempo} playing={this.state.auto}>
+        <Song tempo={this.props.tempo} playing={this.props.playing}>
           <div className="buttons-grid">
             {buttons}
           </div>

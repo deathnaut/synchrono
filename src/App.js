@@ -9,9 +9,11 @@ class App extends Component {
     this.state = {
       tempo: 120,
       party: false,
+      playing: true,
     }
     this._handleChange = this._handleChange.bind(this);
     this._handleParty = this._handleParty.bind(this);
+    this._handlePlayToggle = this._handlePlayToggle.bind(this);
   }
 
   _handleChange(e) {
@@ -36,6 +38,13 @@ class App extends Component {
     }
   }
 
+  _handlePlayToggle(){
+    console.log("play toggle clicked")
+    this.setState({
+      playing: !this.state.playing,
+    })
+  }
+
   componentDidMount() {
     console.log("howdy");
   }
@@ -44,10 +53,15 @@ class App extends Component {
     return (
       <div className="App container">
         <Header party={this.state.party}/>
+        <div>
           <button className="party-button" onClick={this._handleParty}>
             {this.state.party === true ? 'it\'s a party' : 'party mode?'}
           </button>
-        <Sounds tempo={this.state.tempo}/>
+          <button id="play-button" onClick={this._handlePlayToggle}>
+            {this.state.playing === true ? "pause all sounds" : "resume"}
+          </button>
+        </div>
+        <Sounds tempo={this.state.tempo} playing={this.state.playing}/>
         <h1>tempo: <input type="number" name="tempo" value={this.state.tempo} onChange={this._handleChange} min="10" max="300"/></h1>
       </div>
     );
