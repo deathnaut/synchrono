@@ -35,7 +35,8 @@ h1, h3 {
   -moz-animation: slideDown 2s;
   /* Fx 5+ */
   -o-animation: slideDown 2s;
-  animation: slideDown 2s; }
+  animation: slideDown 2s;
+  margin-bottom: 0; }
 
 #root, .App, .container {
   display: flex;
@@ -74,20 +75,30 @@ h1, h3 {
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.3); }
 
-.party-button {
-  animation: slideDown 2.5s;
+.party-button, #play-button {
+  animation: sway 2s infinite;
+  font-size: 20px;
   font-family: "Geo", sans-serif;
   align-self: center;
-  width: 100px;
+  width: 175px;
   border: none;
-  border-radius: 25px;
+  outline: none;
   background-color: rgba(0, 0, 0, 0); }
 
-.party-button:before {
+.party-button:before, #play-button:before {
   content: "> "; }
 
-.party-button:after {
-  content: " <"; }
+.animate {
+  animation: fadeIn 5s; }
+
+#faster-indicator, #slower-indicator {
+  opacity: 0;
+  margin: 0;
+  font-size: 24px;
+  color: white; }
+
+.show {
+  animation: fadeInOut 250ms; }
 
 input {
   background-color: rgba(0, 0, 0, 0);
@@ -98,6 +109,27 @@ input {
   color: white;
   width: 75px; }
 
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes sway {
+  0% {
+    letter-spacing: normal; }
+  55% {
+    letter-spacing: 1px; }
+  100% {
+    letter-spacing: normal; } }
 @keyframes slideDown {
   0% {
     transform: translateY(-5000%); }

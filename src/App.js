@@ -17,6 +17,17 @@ class App extends Component {
   }
 
   _handleChange(e) {
+    if (e.target.value > this.state.tempo) {
+      document.getElementById('faster-indicator').className='show';
+      setTimeout(() => {
+        document.getElementById('faster-indicator').className=''
+      }, 500);
+    } else if (e.target.value < this.state.tempo) {
+      document.getElementById('slower-indicator').className='show';
+      setTimeout(() => {
+        document.getElementById('slower-indicator').className=''
+      }, 500);
+    }
     this.setState({
       tempo: parseInt(e.target.value, 10),
     })
@@ -53,16 +64,22 @@ class App extends Component {
     return (
       <div className="App container">
         <Header party={this.state.party}/>
-        <div>
+        <div className="animate">
           <button className="party-button" onClick={this._handleParty}>
-            {this.state.party === true ? 'it\'s a party' : 'party mode?'}
+            {this.state.party === true ? "it's a party" : "party mode?"}
           </button>
           <button id="play-button" onClick={this._handlePlayToggle}>
-            {this.state.playing === true ? "pause all sounds" : "resume"}
+            {this.state.playing === true ? "pause" : "resume"}
           </button>
         </div>
         <Sounds tempo={this.state.tempo} playing={this.state.playing}/>
-        <h1>tempo: <input type="number" name="tempo" value={this.state.tempo} onChange={this._handleChange} min="10" max="300"/></h1>
+        <div>
+          <h1>tempo: <input type="number" name="tempo" value={this.state.tempo} onChange={this._handleChange} min="10" max="300"/></h1>
+          <div className="indicators">
+            <p id="faster-indicator">faster!</p>
+            <p id="slower-indicator">slower</p>
+          </div>
+        </div>
       </div>
     );
   }
