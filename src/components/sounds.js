@@ -92,9 +92,9 @@ class Sounds extends Component {
           pattern: [[2,-6],[9,-12],11,[14, -12]],
         },
         {
-          filename: "woo.wav",
+          filename: "alien.wav",
           type: "surprise",
-          pattern: [15],
+          pattern: [[4,10]],
         },
       ];
     let buttons = soundObjArr.map((soundObj, idx) => <Button key={idx} sound={soundObj.filename} type={soundObj.type} pattern={soundObj.pattern}/>);
