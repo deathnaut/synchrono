@@ -59,7 +59,7 @@ class Sounds extends Component {
         {
           filename: "hi-hat.ogg",
           type: "hi-hat",
-          pattern: [2,6,10,14],
+          pattern: [2,3,6,7,10,11,14,15],
         },
         {
           filename: "open-hat.wav",
@@ -67,9 +67,9 @@ class Sounds extends Component {
           pattern: [2,6,10,14],
         },
         {
-          filename: "zup.wav",
+          filename: "bass2.wav",
           type: "bass",
-          pattern: [[0,-4],[4, -8],[6,-8]],
+          pattern: [[0,-4],[4, -8],[6,-8],[10,-8]],
         },
         {
           filename: "busy-tone.mp3",

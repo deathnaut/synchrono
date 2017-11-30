@@ -86,6 +86,11 @@ h1, h3 {
   }
 }
 
+
+.button-bar {
+  animation: fadeIn 5s;
+}
+
 #party-button, #play-button {
   animation: sway 2s infinite;
   font-size: 20px;
@@ -102,27 +107,6 @@ h1, h3 {
   content: "> ";
 }
 
-.animate {
-  animation: fadeIn 5s;
-}
-
-.indicators {
-  position: relative;
-  text-align: center;
-}
-
-#faster-indicator, #slower-indicator {
-  position: absolute;
-  opacity: 0;
-  margin: 0 48%;
-  font-size: 28px;
-  color: white;
-}
-
-.show {
-  animation: fadeInOut 500ms;
-}
-
 input {
   background-color: rgba(0,0,0,0);
   outline: none;
@@ -133,6 +117,24 @@ input {
   width: 75px;
 }
 
+.indicators {
+  position: relative;
+  text-align: center;
+  #faster-indicator, #slower-indicator {
+    position: absolute;
+    opacity: 0;
+    margin: 0 48%;
+    font-size: 28px;
+    color: white;
+  }
+  .show {
+    animation: fadeInOut 500ms;
+  }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// animations
 @keyframes fadeInOut {
   0% {opacity: 0;}
   50% {opacity: 1;}
@@ -183,6 +185,8 @@ input {
   100%  {background: purple;}
 }
 
+///////////////////////////////////////////////////////////////////////////////
+// responsiveness
 @media screen and (max-width: 950px), screen and (max-height: 600px){
   html, body {
     max-width: 750px;

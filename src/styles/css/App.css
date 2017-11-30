@@ -75,6 +75,9 @@ h1, h3 {
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: inset -2px -2px 50px 5px rgba(255, 255, 255, 0.3); }
 
+.button-bar {
+  animation: fadeIn 5s; }
+
 #party-button, #play-button {
   animation: sway 2s infinite;
   font-size: 20px;
@@ -89,23 +92,6 @@ h1, h3 {
 #party-button:before, #play-button:before {
   content: "> "; }
 
-.animate {
-  animation: fadeIn 5s; }
-
-.indicators {
-  position: relative;
-  text-align: center; }
-
-#faster-indicator, #slower-indicator {
-  position: absolute;
-  opacity: 0;
-  margin: 0 48%;
-  font-size: 28px;
-  color: white; }
-
-.show {
-  animation: fadeInOut 500ms; }
-
 input {
   background-color: rgba(0, 0, 0, 0);
   outline: none;
@@ -114,6 +100,18 @@ input {
   font-size: 36px;
   color: white;
   width: 75px; }
+
+.indicators {
+  position: relative;
+  text-align: center; }
+  .indicators #faster-indicator, .indicators #slower-indicator {
+    position: absolute;
+    opacity: 0;
+    margin: 0 48%;
+    font-size: 28px;
+    color: white; }
+  .indicators .show {
+    animation: fadeInOut 500ms; }
 
 @keyframes fadeInOut {
   0% {
