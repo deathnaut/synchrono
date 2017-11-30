@@ -1,10 +1,10 @@
 import firebase from 'firebase'
-var config = { /* COPY THE ACTUAL CONFIG FROM FIREBASE CONSOLE */
-  apiKey: "AIzaSyDM1keyF2wqmbcAYSitDIUtvS0t90onlWo",
-  authDomain: "synchrono-app.firebaseapp.com",
-  databaseURL: "https://synchrono-app.firebaseio.com",
-  storageBucket: "synchrono-app.appspot.com",
-  messagingSenderId: "373125440394"
+var config = {
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DB_URL,
+  storageBucket: process.env.STRG_BUCKET,
+  messagingSenderId: process.env.SENDER_ID
 };
 var firebase = firebase.initializeApp(config);
 export default firebase;
