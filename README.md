@@ -1,7 +1,7 @@
 # synchrono
 Synchrono is a music-performance app that allows you to select and play clips in sequence and on beat. Use it when you need a quick break from work or code it and make your own beats!
 
-See it [live](http://synchrono-app.firebaseapp.com).
+See it [live](http://synchrono-km.firebaseapp.com).
 
 
 ### getting started
