@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import puppy from '../image4219.png';
+import logo from '../image4219.png';
 
 
 class Header extends Component {
@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div>
         <header>
-          <img src={puppy} alt='synchrono logo'/>
+          <img src={logo} alt='synchrono logo'/>
           <h3>(the demo)</h3>
           <h1>let's get funky</h1>
         </header>

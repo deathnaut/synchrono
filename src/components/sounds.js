@@ -14,24 +14,6 @@ class Sounds extends Component {
       active: false,
       isActive: '',
     }
-    this._handleClick = this._handleClick.bind(this);
-  }
-
-  _handleClick(){
-    console.log("click");
-    if (this.state.active === false) {
-      this.setState({
-        pattern: [0, 4, 8, 12],
-        active: true,
-        isActive: 'isActive'
-      })
-    } else {
-      this.setState({
-        pattern: [],
-        active: false,
-        isActive: '',
-      })
-    }
   }
 
   render() {

@@ -17,6 +17,6 @@ Navigate to the project in your terminal then enter `npm install`. Once you've d
 
 ### future features
 - Customizable patterns
-- Effects
 - Sound/pattern bank from a database
-- Party mode!
+- Effects
+- Beef up Party mode!
