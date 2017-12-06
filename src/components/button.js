@@ -16,7 +16,6 @@ class Button extends Component {
   }
 
   _handleClick(){
-    console.log("click");
     if (this.state.active === false) {
       this.setState({
         pattern: this.props.pattern,

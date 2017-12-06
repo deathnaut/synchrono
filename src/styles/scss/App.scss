@@ -17,7 +17,7 @@ html, body {
   overflow-y: hidden;
   flex-direction: column;
   margin: 0;
-  color: $ternary-color;
+  color: black;
   align-items: center;
   justify-content: center;
 }
@@ -44,6 +44,11 @@ h1, h3 {
   -o-animation:      slideDown 2s;
   animation: slideDown 2s;
   margin-bottom: 0;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 2px;
 }
 
 #root, .App, .container {
@@ -203,6 +208,6 @@ input {
     max-height: 75px;
   }
   #party-button, #play-button {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

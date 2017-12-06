@@ -35,13 +35,11 @@ class App extends Component {
 
   _handleParty(){
     if (this.state.party === false) {
-      console.log("PARTY TIME!");
       this.setState({
         party: true,
       })
       document.getElementById('root').className='party-mode';
     } else {
-      console.log("party's over :(");
       this.setState({
         party: false,
       })
@@ -50,7 +48,6 @@ class App extends Component {
   }
 
   _handlePlayToggle(){
-    console.log("play toggle clicked")
     this.setState({
       playing: !this.state.playing,
     })
