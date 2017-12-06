@@ -73,8 +73,8 @@ class App extends Component {
         <div>
           <h1>tempo: <input type="number" name="tempo" value={this.state.tempo} onChange={this._handleChange} min="10" max="300"/></h1>
           <div className="indicators">
-            <p id="faster-indicator">faster 😈</p>
-            <p id="slower-indicator">slower 😒</p>
+            <p id="faster-indicator">faster <span role="img" aria-label="smiling imp">😈</span></p>
+            <p id="slower-indicator">slower <span role="img" aria-label="slightly annoyed">😒</span></p>
           </div>
         </div>
       </div>
